@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>final project</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+  <link rel="stylesheet" href="style.css"> 
+  
+
+</head>
+
+<body>
+
+<header>
+
+<!-- ! HEADER-->                      
+  <!-- ! NAVBAR -->
+  <nav class="autohide navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="my-nav" class="collapse navbar-collapse">
+      
+      <!-- ! NAVBAR ITEMS -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#book" tabindex="-1" aria-disabled="true">Book</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#packages" tabindex="-1" aria-disabled="true">Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services" tabindex="-1" aria-disabled="true">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery" tabindex="-1" aria-disabled="true">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Cotact us</a>
+        </li>
+      </ul>
+
+      <!-- ! SIGN UP AND SIGN IN BUTTON -->
+      <form class="form-inline">
+        <button id="login-btn" class="btn btn-outline-success mr-sm-2"  type="button" data-toggle="modal" data-target="#signinModal" data-whatever="@mdo">Sign in</button>
+        <button id="signup-btn" class="btn btn-outline-primary"  type="button" data-toggle="modal" data-target="#signupModal" data-whatever="@fat">Sign up</button>
+
+      </form>
+    </div>
+  </nav>
+  
+  
+   <!-- ! Background image -->
+   <div class="p-5 text-center bg-image" id="bg-header" style="
+   background-image: url('1.jpg');
+   height: 500px;">
+     <div class="d-flex justify-content-center align-items-center h-100">
+       <div class="text-white">
+         <h1 class="mb-3">Draw and enjoy :)</h1>
+         <br>
+         <h5 class="mb-3">Life is a painting, and you are the artist.</br> You have on your palette all the colors in the spectrum </br> the same ones available to Michaelangelo and DaVinci(Paul J. Meyer)</h5>
+         <a class="btn btn-outline-light btn-lg" href="#!" role="button">Start learning to draw</a>
+       </div>
+     </div>
+ </div>
+
+  <!-- <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#" class="logo"><span>T</span>ravel</a>
+
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#book">book</a>
+    <a href="#packages">packages</a>
+    <a href="#services">services</a>
+    <a href="#gallery">gallery</a>
+    <a href="#review">review</a>
+    <a href="#contact">contact</a>
+  </nav> -->
+
+  <!-- <div class="icons">
+    <i class="fas fa-search" id="search-btn"></i>
+    <i  id="login-btn">Sign in</i>
+    <i  id="signup-btn">Sign up</i>
+  </div> -->
+
+  <!-- <form action="" class="search-bar-container">
+    <input type="search" id="search-bar" placeholder="search here...">
+    <label for="search-bar" class="fas fa-search"></label>
+  </form>  -->
+
+
+<!-- ! SIGN UP FORM -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+
+          <div class="form-group">
+            <label for="first-name" class="col-form-label">First name:</label>
+            <input type="text" class="form-control" id="first-name"  placeholder="Enter your first name...">
+          </div>
+
+          <div class="form-group">
+            <label for="last-name" class="col-form-label">Last name:</label>
+            <input type="text" class="form-control" id="last-name"  placeholder="Enter your last name...">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="col-form-label">Email address:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email address...">
+          </div>
+
+          <div class="form-group">
+            <label for="user-name" class="col-form-label">User name:</label>
+            <input type="text" class="form-control" id="user-name"  placeholder="Enter your user name...">
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password...">
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password" class="col-form-label">Confirm password:</label>
+            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password...">
+          </div>
+
+          <button type="button" class="btn btn-info btn-block btn-round">Sign up</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+          <p>do you have an account? <a href="#">sign in</a></p> 
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <!-- <button type="button" class="btn btn-primary">Send message</button> -->
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<!-- ! SIGN IN FORM -->
+<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signinModalLabel">Sign in</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+
+          <div class="form-group">
+            <label for="user-name" class="col-form-label">User name:</label>
+            <input type="text" class="form-control" id="user-name"  placeholder="Enter your user name...">
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password...">
+          </div>
+
+          <input type="checkbox" id="remember">
+          <label for="remember">remember me</label>
+      
+          <button type="button" class="btn btn-info btn-block btn-round">Sign in</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+          <p>forget password? <a href="#">click here</a></p> 
+      </div>
+    </div>
+  </div>
+</div> 
+
+</header>
+
+<!-- <div class="login-form-container">
+  <i class="fas fa-times" id="form-close"></i>
+  <form action="">
+    <h3>sign in</h3>
+    <input type="email" class="box" placeholder="enter your email">
+    <input type="password" class="box" placeholder="enter your password">
+    <input type="submit" value="login now" class="btn">
+    <input type="checkbox" id="remember">
+    <label for="remember">remember me</label>
+    <p>forget password? <a href="#">click here</a></p>
+  </form>
+</div>
+ -->
+<!-- <div class="signup-form-container">
+  <i class="fas fa-times" id="signup-close"></i>
+  <form action="">
+    <h3>sign up</h3>
+    <input type="email" class="box" placeholder="email">
+    <input type="password" class="box" placeholder="password">
+    <input type="password" class="box" placeholder="confirm password">
+    <input type="submit" value="sign up" class="btn">
+  </form>
+</div> -->
+
+<section class="home" id="home">
+  <div class="row">
+    <!-- <div class="content">
+      <h3>upto 75% off</h3>
+      <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+      <a href="#" class="btn">Buy tickets</a>
+    </div> -->
+    <!-- <div class="swiper books-slider">
+      <div class="swiper-wrapper">
+        <a href="#" class="swiper-slide"><img src="assets/argentina.png" alt=""></a>
+        <a href="#" class="swiper-slide"><img src="assets/european-union.png" alt=""></a>
+        <a href="#" class="swiper-slide"><img src="assets/hong-kong.png" alt=""></a>
+        <a href="#" class="swiper-slide"><img src="assets/germany.png" alt=""></a>
+        <a href="#" class="swiper-slide"><img src="assets/netherlands.png" alt=""></a>
+      </div>
+      <img src="assets/stand.png" class="stand" alt="">
+    </div> -->
+  </div>
+</section>
+
+<!-- <section class="book" id="book">
+
+  <h1 class="heading">
+    <span>b</span>
+    <span>o</span>
+    <span>o</span>
+    <span>k</span>
+    <span class="space"></span>
+    <span>n</span>
+    <span>o</span>
+    <span>w</span>
+  </h1>
+
+  <div class="row">
+ -->
+    <!-- <div class="image">
+      <img src="assets/booking.png" alt="">
+    </div> 
+ 
+    <form action="">
+      <div class="inputBox">
+        <h3>where to</h3>
+        <input type="text" placeholder="place name">
+      </div>
+      <div class="inputBox">
+        <h3>how many</h3>
+        <input type="number" placeholder="number of guests">
+      </div>
+      <div class="inputBox">
+        <h3>arrivals</h3>
+        <input type="date">
+      </div>
+      <div class="inputBox">
+        <h3>leaving</h3>
+        <input type="date">
+      </div>
+      <input type="submit" class="btn" value="book now">
+    </form>
+
+  </div>
+
+</section>
+ -->
+<!-- <section class="packages" id="packages">
+
+  <h1 class="heading">
+    <span>p</span>
+    <span>a</span>
+    <span>c</span>
+    <span>k</span>
+    <span>a</span>
+    <span>g</span>
+    <span>e</span>
+    <span>s</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="assets/brazil.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Brazil </h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries!</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> $90.00 <span>$120.00</span> </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="assets/moscow.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> moscow </h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> $90.00 <span>$120.00</span> </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="assets/german.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> German </h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> $90.00 <span>$120.00</span> </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="assets/paris.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries!</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> $90.00 <span>$120.00</span> </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="assets/tokyo.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> tokyo </h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> $90.00 <span>$120.00</span> </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="assets/venice.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> venice </h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> $90.00 <span>$120.00</span> </div>
+        <a href="#" class="btn">book now</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+ -->
+<!-- <section class="services" id="services">
+
+  <h1 class="heading">
+    <span>s</span>
+    <span>e</span>
+    <span>r</span>
+    <span>v</span>
+    <span>i</span>
+    <span>c</span>
+    <span>e</span>
+    <span>s</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <i class="fas fa-hotel"></i>
+      <h3>affordable hotels</h3>
+      <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-utensils"></i>
+      <h3>food and drinks</h3>
+      <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-bullhorn"></i>
+      <h3>safe guide</h3>
+      <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-globe-asia"></i>
+      <h3>around the world</h3>
+      <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-plane"></i>
+      <h3>fastest travel</h3>
+      <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-hiking"></i>
+      <h3>adventures</h3>
+      <p> Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+    </div>
+
+  </div>
+
+</section> -->
+
+<!-- <section class="gallery" id="gallery">
+
+  <h1 class="heading">
+    <span>g</span>
+    <span>a</span>
+    <span>l</span>
+    <span>l</span>
+    <span>e</span>
+    <span>r</span>
+    <span>y</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="assets/g-1.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-2.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-3.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-4.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-5.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-6.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-7.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-8.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="assets/g-9.jpg" alt="">
+      <div class="content">
+        <h3>amazing places</h3>
+        <p>LJust why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+ -->
+<!-- <section class="review" id="review">
+
+  <h1 class="heading">
+    <span>r</span>
+    <span>e</span>
+    <span>v</span>
+    <span>i</span>
+    <span>e</span>
+    <span>w</span>
+  </h1>
+  <div class="swiper-container review-slider">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="assets/pic1.png" alt="">
+          <h3>james</h3>
+          <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="assets/pic2.png" alt="">
+          <h3>jessica</h3>
+          <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="assets/pic3.png" alt="">
+          <h3>sarah</h3>
+          <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="assets/pic4.png" alt="">
+          <h3>alex</h3>
+          <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section> -->
+<!-- <section class="contact" id="contact">
+
+  <h1 class="heading">
+    <span>c</span>
+    <span>o</span>
+    <span>n</span>
+    <span>t</span>
+    <span>a</span>
+    <span>c</span>
+    <span>t</span>
+  </h1>
+
+  <div class="row">
+
+    <div class="image">
+      <img src="assets/contact-us.png" alt="">
+    </div>
+
+    <form action="">
+      <div class="inputBox">
+        <input type="text" placeholder="name">
+        <input type="email" placeholder="email">
+      </div>
+      <div class="inputBox">
+        <input type="number" placeholder="number">
+        <input type="text" placeholder="subject">
+      </div>
+      <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+      <input type="submit" class="btn" value="send message">
+    </form>
+
+  </div>
+
+</section>
+ -->
+<!-- <section class="footer">
+
+  <div class="box-container">
+
+    <div class="box">
+      <h3>about us</h3>
+      <p>Just why do we love to travel so much? It's an experience that goes beyond checking things off a list and counting countries.</p>
+    </div>
+    <div class="box">
+      <h3>branch locations</h3>
+      <a href="#">paris</a>
+      <a href="#">japan</a>
+      <a href="#">france</a>
+    </div>
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#">home</a>
+      <a href="#">book</a>
+      <a href="#">packages</a>
+      <a href="#">services</a>
+      <a href="#">gallery</a>
+      <a href="#">review</a>
+      <a href="#">contact</a>
+    </div>
+
+  </div>
+</section> 
+
+ -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="javascript.js"></script>
+</body>
+</html> 
