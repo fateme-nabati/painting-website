@@ -37,22 +37,22 @@ html{
 
 /* section{
     padding:2rem 9%;
-}
+} */
 
 .heading{
     text-align: center;
     padding:2.5rem 0
-} */
+} 
 
-/* .heading span{
-    font-size: 3.5rem;
-    background:rgba(255, 165, 0,.2);
-    color:var(--orange);
+.heading span{
+    font-size: 2.5rem;
+    background-color: blueviolet;
+    color: black;
     border-radius: .5rem;
     padding:.2rem 1rem;
 }
 
-.heading span.space{
+/* .heading span.space{
     background:none;
 }
 
