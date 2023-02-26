@@ -1,3 +1,4 @@
+
 // let searchBtn = document.querySelector('#search-btn');
 // let searchBar = document.querySelector('.search-bar-container');
 // let formBtn = document.querySelector('#login-btn');
@@ -36,6 +37,15 @@ document.addEventListener("DOMContentLoaded", function(){
     // if
   
   }); 
+  $(".small-image").click(function(){
+    // $("#show_image_popup").fadeIn();
+    alert("hello");
+    $("#show_image_popup").show()
+  })
+  $(".close-btn").click(function(){
+    // $("#show_image_popup").fadeOut()
+    $("#show_image_popup").hide()
+  })
   // DOMContentLoaded  end
 // window.onscroll = () =>{
 //     searchBtn.classList.remove('fa-times');
