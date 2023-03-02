@@ -37,9 +37,8 @@ document.addEventListener("DOMContentLoaded", function(){
   
   }); 
 
-  
+
   $('img[data-enlargable]').addClass('img-enlargable').click(function(){
-    alert("hello");
     var src = $(this).attr('src');
     $('<div>').css({
         background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
@@ -53,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function(){
         $(this).remove();
     }).appendTo('body');
 });
+
   // DOMContentLoaded  end
 // window.onscroll = () =>{
 //     searchBtn.classList.remove('fa-times');
