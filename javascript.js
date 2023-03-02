@@ -34,18 +34,25 @@ document.addEventListener("DOMContentLoaded", function(){
       }); 
       // window.addEventListener
     }
-    // if
   
   }); 
-  $(".small-image").click(function(){
-    // $("#show_image_popup").fadeIn();
+
+  
+  $('img[data-enlargable]').addClass('img-enlargable').click(function(){
     alert("hello");
-    $("#show_image_popup").show()
-  })
-  $(".close-btn").click(function(){
-    // $("#show_image_popup").fadeOut()
-    $("#show_image_popup").hide()
-  })
+    var src = $(this).attr('src');
+    $('<div>').css({
+        background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+        backgroundSize: 'contain',
+        width:'100%', height:'100%',
+        position:'fixed',
+        zIndex:'10000',
+        top:'0', left:'0',
+        cursor: 'zoom-out'
+    }).click(function(){
+        $(this).remove();
+    }).appendTo('body');
+});
   // DOMContentLoaded  end
 // window.onscroll = () =>{
 //     searchBtn.classList.remove('fa-times');
