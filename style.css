@@ -56,23 +56,25 @@ section{
 }
 
 
-/* .btn:hover{
-    background:rgba(255, 165, 0,.2);
-    color:var(--orange);
-}
-
-header .navbar a{
-    color:#fff;
-    font-size: 2rem;
-    margin:0 .8rem;
-}
-*/
 /* header .navbar div ul li a:hover{
     color:var(--orange);
 } */
 li:hover{
     background-color: cornflowerblue;
 }
+
+.carousel{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media (min-width:450px){
+
+    .carousel-inner .carousel-item img{
+        height: 500px;
+    }
+}
+    
 /*
 header .icons i{
     font-size: 2.5rem;
