@@ -1,15 +1,4 @@
 
-// let searchBtn = document.querySelector('#search-btn');
-// let searchBar = document.querySelector('.search-bar-container');
-// let formBtn = document.querySelector('#login-btn');
-// let signupBtn = document.querySelector('#signup-btn');
-// let loginForm = document.querySelector('.login-form-container');
-// let signupForm = document.querySelector('.signup-form-container');
-// let formClose = document.querySelector('#form-close');
-// let signUpClose = document.querySelector('#signup-close');
-// let menu = document.querySelector('#menu-bar');
-// let navbar = document.querySelector('.navbar');
-
 document.addEventListener("DOMContentLoaded", function(){
 
     el_autohide = document.querySelector('.autohide');
@@ -50,48 +39,3 @@ document.addEventListener("DOMContentLoaded", function(){
         $(this).remove();
     }).appendTo('body');
 });
-
-
-
-// var swiper = new Swiper(".review-slider", {
-//     spaceBetween: 20,
-//     loop:true,
-//     autoplay: {
-//         delay: 2500,
-//         disableOnInteraction: false,
-//     },
-//     breakpoints: {
-//         640: {
-//             slidesPerView: 1,
-//         },
-//         768: {
-//             slidesPerView: 2,
-//         },
-//         1024: {
-//             slidesPerView: 3,
-//         },
-//     },
-// });
-
-// var swiper = new Swiper(".brand-slider", {
-//     spaceBetween: 20,
-//     loop:true,
-//     autoplay: {
-//         delay: 2500,
-//         disableOnInteraction: false,
-//     },
-//     breakpoints: {
-//         450: {
-//             slidesPerView: 2,
-//         },
-//         768: {
-//             slidesPerView: 3,
-//         },
-//         991: {
-//             slidesPerView: 4,
-//         },
-//         1200: {
-//             slidesPerView: 5,
-//         },
-//     },
-// });
